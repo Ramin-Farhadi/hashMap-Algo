@@ -6,17 +6,33 @@ s='abcdeda'
 
 */
 
-const twiceLetter = (str) => {
-    const newObj = {};
-    for(let i = 0; i < str.length; i++){
-        if(newObj[str[i]]){
-            return newObj[str[i]];
+//With OBject
+
+// const twiceLetter = (str) => {
+//     const newObj = {};
+//     for(let i = 0; i < str.length; i++){
+//         if(newObj[str[i]]){
+//             return newObj[str[i]];
+//         }else{
+//             newObj[str[i]] = str[i] ;
+//         }
+//     }
+//     console.log(newObj);
+// }
+
+
+// Set data structure
+const twiceLetter = (str) =>{
+    const mySet = new Set();
+    for(const char of str){
+        if(mySet.has(char)){
+            return char;
         }else{
-            newObj[str[i]] = str[i] ;
+            mySet.add(char);
         }
     }
-    console.log(newObj);
+    return false;
 }
 
-const s = 'abcdeda';
+const s = 'abacdeda';
 console.log(twiceLetter(s));
