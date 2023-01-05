@@ -1,0 +1,1 @@
+This project is about my practices on Hashmap algorithm questions.
